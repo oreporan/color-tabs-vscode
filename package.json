@@ -2,7 +2,7 @@
     "name": "color-tabs-vscode-ext",
     "displayName": "ColorTabs",
     "description": "changes the active tab color based on regex",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "publisher": "orepor",
     "repository": {
         "url": "https://github.com/oreporan/color-tabs-vscode"
@@ -14,7 +14,7 @@
         "Other"
     ],
     "keywords": ["monorepo", "reactjs+react-native", "tabs", "tabs color"],
-    "icon": "./docs/icon.jpg",
+    "icon": "docs/icon.jpg",
     "activationEvents": [
         "*"
     ],
@@ -44,7 +44,7 @@
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
-        "package": "rm color-tabs-vscode-ext-* && vsce package",
+        "package": "rm -f color-tabs-vscode-ext-* && vsce package",
         "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
