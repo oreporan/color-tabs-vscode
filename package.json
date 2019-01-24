@@ -1,9 +1,9 @@
 {
-    "name": "title-bar-color-changer",
-    "displayName": "title-bar-color-changer",
-    "description": "changes the title bar based on a regex",
+    "name": "color-tabs-vscode-ext",
+    "displayName": "color-tabs-vscode-ext",
+    "description": "changes the active tab color based on regex",
     "version": "0.0.1",
-    "publisher": "codeowners-org",
+    "publisher": "oreporan",
     "engines": {
         "vscode": "^1.30.0"
     },
@@ -15,12 +15,6 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [
-			{
-				"command": "extension.sayHello",
-				"title": "Hello World"
-			}
-        ],
         "configuration": {
             "type": "object",
             "title": "ColorTabs",
@@ -36,15 +30,7 @@
                     "description": "list of colors to match the paths array"
                 }
             }
-        },
-        "menus": {
-            "editor/title": [{
-                "when": "textInputFocus == true",
-                "command": "extension.sayHello",
-                "group": "navigation"
-            }]
         }
-        
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
