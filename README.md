@@ -1,9 +1,16 @@
-# color-tabs vscode extension README
+# ColorTabs for vscode
 
 ![Alt Text](./docs/example_gif.gif)
 
-## Features
+## Use Cases
 
+If you're working on a monorepo and using vscode, this extension can help you quickly understand if the current file is where you want to be.
+
+For example your repo has both server and client, so this extension will color the client file tabs in one color, and the server file tabs in another.
+
+Another use case is for repos that have both reactJS and react-native files.
+Many times the files have the same names but are just in different directories like `mobile/Component.tsx` and `web/Component.tsx`.
+With this extension you can easily differntiate between the two.
 
 
 
