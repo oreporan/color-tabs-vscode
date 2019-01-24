@@ -1,7 +1,7 @@
-
 import * as vscode from 'vscode';
 
 export default async (color?: string) => {
     const settings = vscode.workspace.getConfiguration('workbench');
-    settings.update('colorCustomizations', {'tab.activeBackground': color || undefined}, vscode.ConfigurationTarget.Workspace)
+    const currentColorCustomization = settings.get('colorCustomizations');
+    settings.update('colorCustomizations', {...currentColorCustomization, 'tab.activeBorder': color || undefined, 'tab.activeBackground': undefined}, vscode.ConfigurationTarget.Workspace)
 }
