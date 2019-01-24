@@ -7,10 +7,9 @@
 
 
 
-
 ## Extension Settings
 
 This extension contributes the following settings:
 
-* `ColorTabs.paths`: array of regex's i.e ['.*web.*', '.*mobile.*']
-* `ColorTabs.colors`: array of colors i.e ["#ff0000", "#00ff00"]
+* `ColorTabs.paths`: array of regex's, default:  ['.*web.*', '.*mobile.*']
+* `ColorTabs.colors`: array of colors default: ["#ff0000", "#00ff00"]

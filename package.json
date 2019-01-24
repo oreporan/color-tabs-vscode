@@ -3,7 +3,8 @@
     "displayName": "color-tabs-vscode-ext",
     "description": "changes the active tab color based on regex",
     "version": "0.0.1",
-    "publisher": "oreporan",
+    "publisher": "orepor",
+    "repository": {"url": "https://github.com/oreporan/color-tabs-vscode"},
     "engines": {
         "vscode": "^1.30.0"
     },
@@ -19,12 +20,12 @@
             "type": "object",
             "title": "ColorTabs",
             "properties": {
-                "tabChanger.paths": {
+                "colorTabs.paths": {
                     "type": "array",
                     "default": [".*\/web\/.*", ".*\/mobile\/.*"],
                     "description": "list of regex paths"
                 },
-                "tabChanger.colors": {
+                "colorTabs.colors": {
                     "type": "array",
                     "default": ["#ff0000", "#00ff00"],
                     "description": "list of colors to match the paths array"

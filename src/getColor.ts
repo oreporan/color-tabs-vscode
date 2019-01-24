@@ -1,11 +1,11 @@
 import * as vscode from 'vscode';
 
 const getPaths = () => {
-    const settings = vscode.workspace.getConfiguration('tabChanger');
+    const settings = vscode.workspace.getConfiguration('colorTabs');
     return settings.get<string[]>('paths');
 }
 const getColors = () => {
-    const settings = vscode.workspace.getConfiguration('tabChanger');
+    const settings = vscode.workspace.getConfiguration('colorTabs');
     return settings.get<string[]>('colors');
 }
 
