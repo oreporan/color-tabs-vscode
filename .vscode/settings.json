@@ -10,5 +10,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
-    "typescript.updateImportsOnFileMove.enabled": "never"
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "workbench.colorCustomizations": {}
 }
