@@ -1,6 +1,6 @@
 {
     "name": "color-tabs-vscode-ext",
-    "displayName": "color-tabs-vscode-ext",
+    "displayName": "ColorTabs",
     "description": "changes the active tab color based on regex",
     "version": "0.2.0",
     "publisher": "orepor",
