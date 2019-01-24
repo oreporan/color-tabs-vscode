@@ -4,7 +4,9 @@
     "description": "changes the active tab color based on regex",
     "version": "0.2.0",
     "publisher": "orepor",
-    "repository": {"url": "https://github.com/oreporan/color-tabs-vscode"},
+    "repository": {
+        "url": "https://github.com/oreporan/color-tabs-vscode"
+    },
     "engines": {
         "vscode": "^1.30.0"
     },
@@ -22,7 +24,16 @@
             "properties": {
                 "colorTabs.config": {
                     "type": "array",
-                    "default": [{"regex": ".*\/web\/.*", "color": "#c0d8e3"},{"regex": ".*\/mobile\/.*", "color":  "#e18a7a"}],
+                    "default": [
+                        {
+                            "regex": ".*/web/.*",
+                            "color": "#c0d8e3"
+                        },
+                        {
+                            "regex": ".*/mobile/.*",
+                            "color": "#e18a7a"
+                        }
+                    ],
                     "description": "list of mappings from path to color"
                 }
             }
@@ -31,15 +42,17 @@
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
+        "package": "rm color-tabs-vscode-ext-* && vsce package",
         "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "tslint": "^5.8.0",
+        "@types/mocha": "^2.2.42",
         "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vsce": "^1.54.0",
+        "vscode": "^1.1.6"
     }
 }
