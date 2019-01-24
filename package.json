@@ -20,15 +20,10 @@
             "type": "object",
             "title": "ColorTabs",
             "properties": {
-                "colorTabs.paths": {
+                "colorTabs.config": {
                     "type": "array",
-                    "default": [".*\/web\/.*", ".*\/mobile\/.*"],
-                    "description": "list of regex paths"
-                },
-                "colorTabs.colors": {
-                    "type": "array",
-                    "default": ["#ff0000", "#00ff00"],
-                    "description": "list of colors to match the paths array"
+                    "default": [{"regex": ".*\/web\/.*", "color": "#c0d8e3"},{"regex": ".*\/mobile\/.*", "color":  "#e18a7a"}],
+                    "description": "list of mappings from path to color"
                 }
             }
         }

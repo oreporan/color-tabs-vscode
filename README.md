@@ -11,5 +11,6 @@
 
 This extension contributes the following settings:
 
-* `colorTabs.paths`: array of regex's, default:  ['.*web.*', '.*mobile.*']
-* `colorTabs.colors`: array of colors default: ["#ff0000", "#00ff00"]
+* `colorTabs.config`:  list of mappings from path to color         
+"default": [{"regex": ".*\/web\/.*", "color": "#ff0000"},{"regex": ".*\/mobile\/.*", "color":  "#00ff00"}],
+
