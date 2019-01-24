@@ -2,7 +2,7 @@
     "name": "color-tabs-vscode-ext",
     "displayName": "color-tabs-vscode-ext",
     "description": "changes the active tab color based on regex",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "orepor",
     "repository": {"url": "https://github.com/oreporan/color-tabs-vscode"},
     "engines": {
