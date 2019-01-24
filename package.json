@@ -1,0 +1,63 @@
+{
+    "name": "title-bar-color-changer",
+    "displayName": "title-bar-color-changer",
+    "description": "changes the title bar based on a regex",
+    "version": "0.0.1",
+    "publisher": "codeowners-org",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+			{
+				"command": "extension.sayHello",
+				"title": "Hello World"
+			}
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "ColorTabs",
+            "properties": {
+                "tabChanger.paths": {
+                    "type": "array",
+                    "default": [".*\/web\/.*", ".*\/mobile\/.*"],
+                    "description": "list of regex paths"
+                },
+                "tabChanger.colors": {
+                    "type": "array",
+                    "default": ["#ff0000", "#00ff00"],
+                    "description": "list of colors to match the paths array"
+                }
+            }
+        },
+        "menus": {
+            "editor/title": [{
+                "when": "textInputFocus == true",
+                "command": "extension.sayHello",
+                "group": "navigation"
+            }]
+        }
+        
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
