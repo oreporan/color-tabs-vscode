@@ -1,6 +1,6 @@
 # color-tabs vscode extension README
 
-![Alt Text](./docs/gif.gif)
+![Alt Text](./docs/example_gif.gif)
 
 ## Features
 
