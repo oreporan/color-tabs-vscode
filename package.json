@@ -14,7 +14,7 @@
         "Other"
     ],
     "keywords": ["monorepo", "reactjs+react-native", "tabs", "tabs color"],
-    "icon": "docs/icon.jpg",
+    "icon": "docs/tabsIcon.png",
     "activationEvents": [
         "*"
     ],
