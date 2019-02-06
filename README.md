@@ -24,9 +24,9 @@ This extension contributes the following settings:
 * `colorTabs.config`:  list of mappings from path to color         
 "default": [{"regex": ".*\/web\/.*", "color": "#ff0000"},{"regex": ".*\/mobile\/.*", "color":  "#00ff00"}],
 
-* Tab borders are colored by default, you can turn this off by adding `{ "tabBorder" : false }` to colorTabs.config 
+* Tab borders are colored by default, you can turn this off by adding `"colorTabs.tabsBorder" : false` to settings.json 
 
-* You can also enable title bar coloring. This can be done by adding `{ "tabBar" : true }` to colorTabs.config
+* You can also enable title background coloring. This can be done by adding `"colorTabs.titleBackground" : true` to settings.json
 
 For example: 
 
