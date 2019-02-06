@@ -1,14 +1,14 @@
 'use strict';
 import * as vscode from 'vscode';
 import getColorForPath from './getColor';
-import changeColorInTabBar from './changeColorInTabBar';
+import changeColorInTabBar from './changeColors';
 
 export function activate(context: vscode.ExtensionContext) {
     
-    let disposable = vscode.window.onDidChangeActiveTextEditor(async (e: vscode.TextEditor | undefined) => {
+    const disposable = vscode.window.onDidChangeActiveTextEditor(async (e: vscode.TextEditor | undefined) => {
         
         if (!e) return null;
-        var currentlyOpenTabfilePath = e.document.fileName;
+        const currentlyOpenTabfilePath = e.document.fileName;
         
         const color = getColorForPath(currentlyOpenTabfilePath);
         try {

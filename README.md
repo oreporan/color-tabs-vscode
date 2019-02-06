@@ -24,3 +24,30 @@ This extension contributes the following settings:
 * `colorTabs.config`:  list of mappings from path to color         
 "default": [{"regex": ".*\/web\/.*", "color": "#ff0000"},{"regex": ".*\/mobile\/.*", "color":  "#00ff00"}],
 
+* Tab borders are colored by default, you can turn this off by adding `{ "tabBorder" : false }` to colorTabs.config 
+
+* You can also enable title bar coloring. This can be done by adding `{ "tabBar" : true }` to colorTabs.config
+
+For example: 
+
+```
+// To settings.json  => workspace settings. Defaults to the last color (.* is a wildcard).
+"colorTabs.config": [
+        {
+            "regex": ".*\/red\/.*",
+            "color": "#FF0000"
+        },
+        {
+            "regex": ".*\/green\/.*",
+            "color": "#00FF00"
+        },{
+            "regex": ".*\/blue\/.*",
+            "color": "#0000FF"
+        },
+        {
+            "regex": ".*",
+            "color": "#000000"
+        },
+    ]
+```
+

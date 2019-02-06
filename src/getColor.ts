@@ -2,16 +2,16 @@ import * as vscode from 'vscode';
 
 type Config = {
     regex: string;
-    color: string
+    color: string;
 }
 
-const getConfig = () => {
+export const getSetting = (value: string) => {
     const settings = vscode.workspace.getConfiguration('colorTabs');
-    return settings.get<Config[]>('config');
+    return  settings.get<Config[]>(value);
 }
 
 export default (path: string) => {
-    const config = getConfig()
+    const config = getSetting('config')
     if (!config) return undefined;
     
     const map = config.find(mapping => new RegExp(mapping.regex, 'g').test(path))

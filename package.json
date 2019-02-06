@@ -15,7 +15,12 @@
         "Themes",
         "Programming Languages"
     ],
-    "keywords": ["monorepo", "reactjs+react-native", "tabs", "tabs color"],
+    "keywords": [
+        "monorepo",
+        "reactjs+react-native",
+        "tabs",
+        "tabs color"
+    ],
     "icon": "docs/tabsIcon.png",
     "activationEvents": [
         "*"
@@ -39,6 +44,16 @@
                         }
                     ],
                     "description": "list of mappings from path to color"
+                },
+                "colorTabs.tabsBorder": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "color tab border"
+                },
+                "colorTabs.titleBackground": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "color title bar background"
                 }
             }
         }
