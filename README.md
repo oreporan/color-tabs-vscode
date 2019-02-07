@@ -24,14 +24,14 @@ This extension contributes the following settings:
 * `colorTabs.config`:  list of mappings from path to color         
 "default": [{"regex": ".*\/web\/.*", "color": "#ff0000"},{"regex": ".*\/mobile\/.*", "color":  "#00ff00"}],
 
-* Tab borders are colored by default, you can turn this off by adding `"colorTabs.tabsBorder" : false` to settings.json 
+* Tab borders are colored by default, you can turn this off by adding `"colorTabs.tabBorder" : false` to settings.json 
 
 * You can also enable title background coloring. This can be done by adding `"colorTabs.titleBackground" : true` to settings.json
 
 For example: 
 
 ```
-// To settings.json  => workspace settings. Defaults to the last color (.* is a wildcard).
+// To settings.json  => workspace settings. 
 "colorTabs.config": [
         {
             "regex": ".*\/red\/.*",
