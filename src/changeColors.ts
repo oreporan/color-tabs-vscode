@@ -1,15 +1,17 @@
 import * as vscode from 'vscode';
-import { getSetting } from './getColor';
+import getSettings from './getSettings';
 
-type ColorCustomization = { [key: string]: string | undefined }
+type ColorCustomization = { [key: string]: string | undefined };
 
 export default async (color?: string) => {
     const settings = vscode.workspace.getConfiguration('workbench');
     const currentColorCustomization: ColorCustomization = settings.get('colorCustomizations') || {};
-    const tabBarBorderColor = (getSetting('tabBorder') || true) ? color: undefined
-    const titleBarBackgroundColor = getSetting('titleBackground') ? color : undefined
+    const extensionSettings = getSettings();
 
-    let colorCustomization: ColorCustomization = {...currentColorCustomization, 'tab.activeBorder': tabBarBorderColor, 'titleBar.activeBackground': titleBarBackgroundColor}
+    const tabBarBorderColor = (extensionSettings.tabBorder !== false) ? color : undefined;
+    const titleBarBackgroundColor = extensionSettings.titleBackground ? color : undefined;
 
-    settings.update('colorCustomizations', colorCustomization, vscode.ConfigurationTarget.Workspace)
+    let colorCustomization: ColorCustomization = { ...currentColorCustomization, 'tab.activeBorder': tabBarBorderColor, 'titleBar.activeBackground': titleBarBackgroundColor };
+
+    settings.update('colorCustomizations', colorCustomization, vscode.ConfigurationTarget.Workspace);
 }

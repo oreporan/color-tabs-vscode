@@ -1,7 +1,7 @@
 'use strict';
 import * as vscode from 'vscode';
 import getColorForPath from './getColor';
-import changeColorInTabBar from './changeColors';
+import changeColors from './changeColors';
 
 export function activate(context: vscode.ExtensionContext) {
     
@@ -12,9 +12,9 @@ export function activate(context: vscode.ExtensionContext) {
         
         const color = getColorForPath(currentlyOpenTabfilePath);
         try {
-            await changeColorInTabBar(color)
+            await changeColors(color);
         } catch (error) {
-            console.log("ERROR", error)
+            console.log("ERROR", error);
         }
 
     })
@@ -23,5 +23,5 @@ export function activate(context: vscode.ExtensionContext) {
 
 // this method is called when your extension is deactivated
 export function deactivate() {
-    changeColorInTabBar()
+    changeColors();
 }

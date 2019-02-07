@@ -1,20 +1,10 @@
-import * as vscode from 'vscode';
-
-type Config = {
-    regex: string;
-    color: string;
-}
-
-export const getSetting = (value: string) => {
-    const settings = vscode.workspace.getConfiguration('colorTabs');
-    return  settings.get<Config[]>(value);
-}
+import getSettings from './getSettings'
 
 export default (path: string) => {
-    const config = getSetting('config')
+    const config = getSettings().config;
     if (!config) return undefined;
     
-    const map = config.find(mapping => new RegExp(mapping.regex, 'g').test(path))
+    const map = config.find(mapping => new RegExp(mapping.regex, 'g').test(path));
     if (!map) return undefined;
-    return map.color
+    return map.color;
 }
