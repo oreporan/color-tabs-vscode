@@ -1,9 +1,25 @@
+![Logo](./docs/ColorTabs.png)
 # ColorTabs for vscode
 
 [![MarketplaceVersion](https://vsmarketplacebadge.apphb.com/version/orepor.color-tabs-vscode-ext.svg)](https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext#overview)
 [![MarkerplaceDownloads](https://vsmarketplacebadge.apphb.com/downloads/orepor.color-tabs-vscode-ext.svg)](https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext#overview)
 
 ![Alt Text](./docs/example_gif.gif)
+
+
+
+# What's new
+
+## [0.4.4]
+
+- ColorTabs can now color your title background as well - [PR #2](https://github.com/oreporan/color-tabs-vscode/pull/2).    
+set `colorTabs.titleBackground` to `true` in your workspace settings to get this new feature.
+Example:
+![Title background](./docs/color-tabs-4.4.gif)
+
+
+
+
 
 ## Use Cases
 
