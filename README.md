@@ -10,6 +10,14 @@
 
 # What's new
 
+## [0.5.0]
+
+- ColorTabs can now add a label to your title background as well - [PR #4](https://github.com/oreporan/color-tabs-vscode/pull/4).    
+set `colorTabs.titleLabel` to `true` in your workspace settings to get this new feature.
+Example (with `mobile` label):
+![Title label](./docs/color-tabs-5.0.png)
+
+
 ## [0.4.4]
 
 - ColorTabs can now color your title background as well - [PR #2](https://github.com/oreporan/color-tabs-vscode/pull/2).    
@@ -53,14 +61,17 @@ A `workspace.settings` example :
 "colorTabs.config": [
         {
             "regex": ".*\/mobile\/.*",
-            "color": "#FF0000"
+            "color": "#FF0000",
+            "label": "MOBILE",
         },
         {
             "regex": ".*\/web\/.*",
-            "color": "#00FF00"
+            "color": "#00FF00",
+            "label": "WEB",
         },{
             "regex": ".*\/docs\/.*",
-            "color": "#0000FF"
+            "color": "#0000FF",
+            "label": "DOCS",
         },
     ]
 "colorTabs.titleBackground": true    
