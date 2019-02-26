@@ -37,11 +37,13 @@
                     "default": [
                         {
                             "regex": ".*/web/.*",
-                            "color": "#c0d8e3"
+                            "color": "#c0d8e3",
+                            "label": "WEB"
                         },
                         {
                             "regex": ".*/mobile/.*",
-                            "color": "#e18a7a"
+                            "color": "#e18a7a",
+                            "label": "MOBILE"
                         }
                     ],
                     "description": "list of mappings from path to color"
@@ -55,6 +57,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "color title bar background if regex match found"
+                },
+                "colorTabs.titleLabel": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "append label to the title bar using the provided regex label "
                 }
             }
         }

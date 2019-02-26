@@ -1,7 +1,8 @@
 'use strict';
 import * as vscode from 'vscode';
-import getColorForPath from './getColor';
+import getMapping from './getMapping';
 import changeColors from './changeColors';
+import changeLabel from './changeLabel';
 
 export function activate(context: vscode.ExtensionContext) {
     
@@ -10,9 +11,12 @@ export function activate(context: vscode.ExtensionContext) {
         if (!e) return null;
         const currentlyOpenTabfilePath = e.document.fileName;
         
-        const color = getColorForPath(currentlyOpenTabfilePath);
+        const mapping = getMapping(currentlyOpenTabfilePath);
         try {
-            await changeColors(color);
+            await Promise.all([
+                changeColors(mapping && mapping.color),
+                changeLabel(mapping && mapping.label)
+            ]);
         } catch (error) {
             console.log("ERROR", error);
         }
