@@ -38,12 +38,12 @@
                         {
                             "regex": ".*/web/.*",
                             "color": "#c0d8e3",
-                            "label": "web"
+                            "label": "WEB"
                         },
                         {
                             "regex": ".*/mobile/.*",
                             "color": "#e18a7a",
-                            "label": "mobile"
+                            "label": "MOBILE"
                         }
                     ],
                     "description": "list of mappings from path to color"
@@ -61,7 +61,7 @@
                 "colorTabs.titleLabel": {
                     "type": "boolean",
                     "default": false,
-                    "description": "label the background using the provided regex label "
+                    "description": "append label to the title bar using the provided regex label "
                 }
             }
         }
