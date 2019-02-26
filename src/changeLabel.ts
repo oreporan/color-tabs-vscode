@@ -1,29 +1,33 @@
 import * as vscode from 'vscode';
 import getSettings from './getSettings';
 
-const addOrReplaceLabel = (label, originalString): string => {
-    const regex = new RegExp('(~\[.*\]~)(.*)', 'g');
+const addOrReplaceLabel = (label: string, originalString: string): string => {
+    const regex = new RegExp(/(~\[.*\]~)(.*)/, 'g');
     const hasLabel = regex.test(originalString);
 
+    
     if (hasLabel) {
-        originalString.replace(regex, `~[${label}]~\$\{\separator}$3`);
+        return originalString.replace(regex, `~[${label}]~\$\{\separator}$2`);
     } else {
         return `~[${label}]~\$\{\separator}${originalString}`;
     }
 }
 
-export default async (label?: string) => {
-    const settings = vscode.workspace.getConfiguration('window');
-    const currentTitleSetting = settings.get('title') || {};
+const isFeatureEnabled = (): boolean => {
     const extensionSettings = getSettings();
-
     const shouldAppendLabel = extensionSettings.titleLabel;
+    return !!shouldAppendLabel;
+} 
 
-    if (shouldAppendLabel && label) {
+export default async (label?: string) => {
+    if (!isFeatureEnabled()) return;
+    
+    const settings = vscode.workspace.getConfiguration('window');
+    const currentTitleSetting = settings.get<string>('title') || '';
+    if (label) {
         const newTitle = addOrReplaceLabel(label, currentTitleSetting);
-        console.log("WOOHOOO TITLE", newTitle)
         settings.update('title', newTitle, vscode.ConfigurationTarget.Workspace);
     } else {
-        settings.update('title', {}, vscode.ConfigurationTarget.Workspace);
+        settings.update('title', undefined, vscode.ConfigurationTarget.Workspace);
     }
 }
