@@ -4,7 +4,7 @@
 [![MarketplaceVersion](https://vsmarketplacebadge.apphb.com/version/orepor.color-tabs-vscode-ext.svg)](https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext#overview)
 [![MarkerplaceDownloads](https://vsmarketplacebadge.apphb.com/downloads/orepor.color-tabs-vscode-ext.svg)](https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext#overview)
 
-![Alt Text](./docs/example_gif.gif)
+![Title background](./docs/color-tabs-4.4.gif)
 
 
 
@@ -27,11 +27,9 @@ Example:
 
 
 
+## Common Use Cases
 
-
-## Use Cases
-
-If you're working on a monorepo and using vscode, this extension can help you quickly understand if the current file is where you want to be.
+1. Working on a monorepo, this extension can help you quickly understand if the current file is where you want to be.
 
 For example your repo has both server and client, so this extension will color the client file tabs in one color, and the server file tabs in another.
 
@@ -43,6 +41,20 @@ Many times the files have the same names but are just in different directories l
 
 With this extension you can easily differntiate between the two.
 
+2. Accidentaly writing code in build/auto-generated files -     
+Sometimes you start writing in some file and realize its an auto-generated file that will get over-written. Frustrating right?
+Try this plugin with this regex:
+```json
+"colorTabs.config": [
+        {
+            "regex": ".*\/build\/.*",
+            "color": "#FF0000"
+        }
+    ]
+"colorTabs.titleBackground": true    
+```
+
+And `BOOM` - your build files are now in red. No more mistakes!
 
 
 ## Extension Settings
