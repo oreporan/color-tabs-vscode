@@ -10,6 +10,8 @@ type AllSettings = {
     config?: ColorRegex[];
     tabBorder?: boolean;
     titleBackground?: boolean;
+    activityBarBackground?: boolean;
+    statusBarBackground?: boolean;
     titleLabel?: boolean;
 }
 
