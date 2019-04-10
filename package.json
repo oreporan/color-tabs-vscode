@@ -58,6 +58,16 @@
                     "default": false,
                     "description": "color title bar background if regex match found"
                 },
+                "colorTabs.activityBarBackground": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "color activity bar background if regex match found"
+                },
+                "colorTabs.statusBarBackground": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "color status bar background if regex match found"
+                },
                 "colorTabs.titleLabel": {
                     "type": "boolean",
                     "default": false,

@@ -10,8 +10,16 @@ export default async (color?: string) => {
 
     const tabBarBorderColor = (extensionSettings.tabBorder !== false) ? color : undefined;
     const titleBarBackgroundColor = extensionSettings.titleBackground ? color : undefined;
+    const activityBarBackgroundColor = extensionSettings.activityBarBackground ? color : undefined;
+    const statusBarBackgroundColor = extensionSettings.statusBarBackground ? color : undefined;
 
-    let colorCustomization: ColorCustomization = { ...currentColorCustomization, 'tab.activeBorder': tabBarBorderColor, 'titleBar.activeBackground': titleBarBackgroundColor };
+    let colorCustomization: ColorCustomization = {
+        ...currentColorCustomization,
+        'tab.activeBorder': tabBarBorderColor,
+        'titleBar.activeBackground': titleBarBackgroundColor,
+        'activityBar.background': activityBarBackgroundColor,
+        'statusBar.background': statusBarBackgroundColor,
+    };
 
     settings.update('colorCustomizations', colorCustomization, vscode.ConfigurationTarget.Workspace);
 }
