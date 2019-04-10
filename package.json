@@ -1,8 +1,8 @@
 {
     "name": "color-tabs-vscode-ext",
     "displayName": "ColorTabs",
-    "description": "changes the active tab color or title bar based on regex",
-    "version": "0.5.1",
+    "description": "changes the active tab/status-bar/title-background color based on regex",
+    "version": "0.6.0",
     "publisher": "orepor",
     "repository": {
         "url": "https://github.com/oreporan/color-tabs-vscode"
@@ -19,7 +19,8 @@
         "monorepo",
         "reactjs+react-native",
         "tabs",
-        "title bar",
+        "title bar color",
+        "status bar color",
         "tabs color"
     ],
     "icon": "docs/ColorTabs.png",
@@ -65,7 +66,7 @@
                 },
                 "colorTabs.statusBarBackground": {
                     "type": "boolean",
-                    "default": false,
+                    "default": true,
                     "description": "color status bar background if regex match found"
                 },
                 "colorTabs.titleLabel": {
