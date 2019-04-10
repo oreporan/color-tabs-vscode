@@ -12,14 +12,12 @@
 
 ## [0.6.0]
 
-- ColorTabs now changes the color of your status bar (set to true by default) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    
+- ColorTabs now changes the color of your status bar (set to `true` by default) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    
 set `colorTabs.statusBarBackground` to `true` in your workspace settings to get this new feature.
-Example (with `mobile` label):
 
 - ColorTabs can now change the color of your activity bar (Left side bar) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    
 set `colorTabs.activityBarBackground` to `true` in your workspace settings to get this new feature.
-Example (with `mobile` label):
-![Title label](./docs/color-tabs-6.0.gif)
+
 
 ## [0.5.0]
 
