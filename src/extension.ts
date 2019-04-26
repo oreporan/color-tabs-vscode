@@ -7,7 +7,7 @@ import changeLabel from './changeLabel';
 export function activate(context: vscode.ExtensionContext) {
     
     const disposable = vscode.window.onDidChangeActiveTextEditor(async (e: vscode.TextEditor | undefined) => {
-        
+
         if (!e) return null;
         const currentlyOpenTabfilePath = e.document.fileName;
         

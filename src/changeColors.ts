@@ -21,6 +21,7 @@ export default async (color?: string) => {
     let colorCustomization: ColorCustomization = {
         ...currentColorCustomization,
         'tab.activeBorder': tabBarBorderColor,
+        'tab.unfocusedActiveBorder': '#fff0', // Transparent
         'titleBar.activeBackground': titleBarBackgroundColor,
         'activityBar.background': activityBarBackgroundColor,
         'statusBar.background': statusBarBackgroundColor,
