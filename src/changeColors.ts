@@ -3,12 +3,12 @@ import getSettings from './getSettings';
 
 type ColorCustomization = { [key: string]: string | undefined };
 
-const invertHex = (hex) => {
+const invertHex = (hex?: string) => {
     if (!hex) {
         return;
     }
 
-    return hex.replace('#', '0x') > 0xffffff / 2 ? '#000000' : '#ffffff';
+    return Number(hex.replace('#', '0x')) > 0xffffff / 2 ? '#000000' : '#ffffff';
 }
 
 export default async (color?: string) => {
