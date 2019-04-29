@@ -11,5 +11,7 @@
     "window.zoomLevel": 0,
     "terminal.integrated.rendererType": "dom",
     "typescript.updateImportsOnFileMove.enabled": "never",
-    "workbench.colorCustomizations": {}
+    "workbench.colorCustomizations": {
+        "tab.unfocusedActiveBorder": "#fff0"
+    }
 }

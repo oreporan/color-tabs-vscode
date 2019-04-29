@@ -1,6 +1,10 @@
 
 # What's new
 
+## [0.7.0]
+
+- Added invertedHex to contrast with background colors of statusbar, titlebar and activity bar - [PR #16](https://github.com/oreporan/color-tabs-vscode/pull/16)
+
 ## [0.6.0]
 
 - ColorTabs now changes the color of your status bar (set to true by default) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    

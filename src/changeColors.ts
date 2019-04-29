@@ -23,10 +23,13 @@ export default async (color?: string) => {
     } = getSettings();
 
     const tabBarBorderColor = (tabBorder !== false) ? color : undefined;
+
     const titleBarBackgroundColor = titleBackground ? color : undefined;
     const titleBarForegroundColor = titleBackground ? colorInverted : undefined;
+    
     const activityBarBackgroundColor = activityBarBackground ? color : undefined;
     const activityBarForegroundColor = activityBarBackground ? colorInverted : undefined;
+    
     const statusBarBackgroundColor = statusBarBackground ? color : undefined;
     const statusBarForegroundColor = statusBarBackground ? colorInverted : undefined;
 
