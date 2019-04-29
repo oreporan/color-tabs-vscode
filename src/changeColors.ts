@@ -12,6 +12,7 @@ const invertHex = (hex) => {
 }
 
 export default async (color?: string) => {
+    const colorInverted = invertHex(color);
     const settings = vscode.workspace.getConfiguration('workbench');
     const currentColorCustomization: ColorCustomization = settings.get('colorCustomizations') || {};
     const {
@@ -19,15 +20,15 @@ export default async (color?: string) => {
         titleBackground,
         activityBarBackground,
         statusBarBackground,
-    } = getSettings()
+    } = getSettings();
 
     const tabBarBorderColor = (tabBorder !== false) ? color : undefined;
     const titleBarBackgroundColor = titleBackground ? color : undefined;
-    const titleBarForegroundColor = titleBackground ? invertHex(color) : undefined;
+    const titleBarForegroundColor = titleBackground ? colorInverted : undefined;
     const activityBarBackgroundColor = activityBarBackground ? color : undefined;
-    const activityBarForegroundColor = activityBarBackground ? invertHex(color) : undefined;
+    const activityBarForegroundColor = activityBarBackground ? colorInverted : undefined;
     const statusBarBackgroundColor = statusBarBackground ? color : undefined;
-    const statusBarForegroundColor = statusBarBackground ? invertHex(color) : undefined;
+    const statusBarForegroundColor = statusBarBackground ? colorInverted : undefined;
 
     let colorCustomization: ColorCustomization = {
         ...currentColorCustomization,
