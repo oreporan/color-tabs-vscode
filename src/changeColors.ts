@@ -25,7 +25,9 @@ export default async (color?: string) => {
     const titleBarBackgroundColor = titleBackground ? color : undefined;
     const titleBarForegroundColor = titleBackground ? invertHex(color) : undefined;
     const activityBarBackgroundColor = activityBarBackground ? color : undefined;
+    const activityBarForegroundColor = activityBarBackground ? invertHex(color) : undefined;
     const statusBarBackgroundColor = statusBarBackground ? color : undefined;
+    const statusBarForegroundColor = statusBarBackground ? invertHex(color) : undefined;
 
     let colorCustomization: ColorCustomization = {
         ...currentColorCustomization,
@@ -34,7 +36,9 @@ export default async (color?: string) => {
         'titleBar.activeBackground': titleBarBackgroundColor,
         'titleBar.activeForeground': titleBarForegroundColor,
         'activityBar.background': activityBarBackgroundColor,
+        'activityBar.foreground': activityBarForegroundColor,
         'statusBar.background': statusBarBackgroundColor,
+        'statusBar.foreground': statusBarForegroundColor,
     };
 
     settings.update('colorCustomizations', colorCustomization, vscode.ConfigurationTarget.Workspace);
