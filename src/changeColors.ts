@@ -3,12 +3,12 @@ import getSettings from './getSettings';
 
 type ColorCustomization = { [key: string]: string | undefined };
 
-const invertHex = (hex) => {
+const invertHex = (hex?: string) => {
     if (!hex) {
         return;
     }
 
-    return hex.replace('#', '0x') > 0xffffff / 2 ? '#000000' : '#ffffff';
+    return Number(hex.replace('#', '0x')) > 0xffffff / 2 ? '#000000' : '#ffffff';
 }
 
 export default async (color?: string) => {
@@ -23,10 +23,13 @@ export default async (color?: string) => {
     } = getSettings();
 
     const tabBarBorderColor = (tabBorder !== false) ? color : undefined;
+
     const titleBarBackgroundColor = titleBackground ? color : undefined;
     const titleBarForegroundColor = titleBackground ? colorInverted : undefined;
+    
     const activityBarBackgroundColor = activityBarBackground ? color : undefined;
     const activityBarForegroundColor = activityBarBackground ? colorInverted : undefined;
+    
     const statusBarBackgroundColor = statusBarBackground ? color : undefined;
     const statusBarForegroundColor = statusBarBackground ? colorInverted : undefined;
 
