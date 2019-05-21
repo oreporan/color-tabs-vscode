@@ -98,3 +98,5 @@ A `workspace.settings` example :
 "colorTabs.titleBackground": true    
 ```
 
+## Known Issues
+* This plugin writes to your vscode workspace `settings.json`, this means that it creates a git commit. To avoid pushing this change, you should have your `.vscode` directory in `.gitignore`. Currently writing to the `settings.json` is the only way to manipulate the colors in runtime.
