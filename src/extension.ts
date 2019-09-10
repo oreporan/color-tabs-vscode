@@ -9,7 +9,7 @@ export function activate(context: vscode.ExtensionContext) {
     const disposable = vscode.window.onDidChangeActiveTextEditor(async (e: vscode.TextEditor | undefined) => {
 
         if (!e) return null;
-        const currentlyOpenTabfilePath = e.document.fileName;
+        const currentlyOpenTabfilePath= vscode.workspace.asRelativePath(e.document.fileName);
         
         const mapping = getMapping(currentlyOpenTabfilePath);
         try {
