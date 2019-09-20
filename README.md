@@ -6,35 +6,76 @@
 
 ![Title background](./docs/color-tabs-4.4.gif)
 
+<!-- TOC -->
 
+- [ColorTabs for vscode](#colortabs-for-vscode)
+- [What's new](#whats-new)
+    - [Extension Settings](#extension-settings)
+    - [Common Use Cases](#common-use-cases)
+    - [Known Issues](#known-issues)
+
+<!-- /TOC -->
 
 # What's new
 
-## [0.6.0]
+* [0.6.0]
+    - ColorTabs now changes the color of your status bar (set to `true` by default) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    
+    set `colorTabs.statusBarBackground` to `true` in your workspace settings to get this new feature.
 
-- ColorTabs now changes the color of your status bar (set to `true` by default) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    
-set `colorTabs.statusBarBackground` to `true` in your workspace settings to get this new feature.
-
-- ColorTabs can now change the color of your activity bar (Left side bar) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    
-set `colorTabs.activityBarBackground` to `true` in your workspace settings to get this new feature.
-
-
-## [0.5.0]
-
-- ColorTabs can now add a label to your title background as well - [PR #4](https://github.com/oreporan/color-tabs-vscode/pull/4).    
-set `colorTabs.titleLabel` to `true` in your workspace settings to get this new feature.
-Example (with `mobile` label):
-![Title label](./docs/color-tabs-5.0.png)
+    - ColorTabs can now change the color of your activity bar (Left side bar) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    
+    set `colorTabs.activityBarBackground` to `true` in your workspace settings to get this new feature.
 
 
-## [0.4.4]
+* [0.5.0]
+    - ColorTabs can now add a label to your title background as well - [PR #4](https://github.com/oreporan/color-tabs-vscode/pull/4).    
+    set `colorTabs.titleLabel` to `true` in your workspace settings to get this new feature.
+    Example (with `mobile` label):
+    ![Title label](./docs/color-tabs-5.0.png)
 
-- ColorTabs can now color your title background as well - [PR #2](https://github.com/oreporan/color-tabs-vscode/pull/2).    
-set `colorTabs.titleBackground` to `true` in your workspace settings to get this new feature.
-Example:
-![Title background](./docs/color-tabs-4.4.gif)
+
+* [0.4.4]
+
+    - ColorTabs can now color your title background as well - [PR #2](https://github.com/oreporan/color-tabs-vscode/pull/2).    
+    set `colorTabs.titleBackground` to `true` in your workspace settings to get this new feature.
+    Example:
+    ![Title background](./docs/color-tabs-4.4.gif)
 
 
+## Extension Settings
+
+This extension contributes the following settings:
+
+* `colorTabs.config`:  list of mappings from path to color         
+"default": [{"regex": ".*\/web\/.*", "color": "#ff0000"},{"regex": ".*\/mobile\/.*", "color":  "#00ff00"}],
+
+* `colorTabs.statusBarBackground`:  Enable statusBar background coloring. default to `true`
+* `colorTabs.tabBorder`:  Enable tab border coloring. default to `true`
+* `colorTabs.titleBackground`:  Enable title background coloring. default to `false`
+* `colorTabs.activityBarBackground`:  Enable activityBar background coloring. default to `false`
+* `colorTabs.titleLabel`:  Enable title label. default to `false`
+
+
+A `workspace.settings` example : 
+
+```json
+"colorTabs.config": [
+        {
+            "regex": ".*\/mobile\/.*",
+            "color": "#FF0000",
+            "label": "MOBILE",
+        },
+        {
+            "regex": ".*\/web\/.*",
+            "color": "#00FF00",
+            "label": "WEB",
+        },{
+            "regex": ".*\/docs\/.*",
+            "color": "#0000FF",
+            "label": "DOCS",
+        },
+    ]
+"colorTabs.titleBackground": true    
+```
 
 ## Common Use Cases
 
@@ -66,37 +107,6 @@ Try this plugin with this regex:
 And `BOOM` - your build files are now in red. No more mistakes!
 
 
-## Extension Settings
-
-This extension contributes the following settings:
-
-* `colorTabs.config`:  list of mappings from path to color         
-"default": [{"regex": ".*\/web\/.*", "color": "#ff0000"},{"regex": ".*\/mobile\/.*", "color":  "#00ff00"}],
-
-* `colorTabs.titleBackground`:  Enable title background coloring. default to `false`
-
-
-A `workspace.settings` example : 
-
-```json
-"colorTabs.config": [
-        {
-            "regex": ".*\/mobile\/.*",
-            "color": "#FF0000",
-            "label": "MOBILE",
-        },
-        {
-            "regex": ".*\/web\/.*",
-            "color": "#00FF00",
-            "label": "WEB",
-        },{
-            "regex": ".*\/docs\/.*",
-            "color": "#0000FF",
-            "label": "DOCS",
-        },
-    ]
-"colorTabs.titleBackground": true    
-```
 
 ## Known Issues
 * This plugin writes to your vscode workspace `settings.json`, this means that it creates a git commit. To avoid pushing this change, you should have your `.vscode` directory in `.gitignore`. Currently writing to the `settings.json` is the only way to manipulate the colors in runtime.
