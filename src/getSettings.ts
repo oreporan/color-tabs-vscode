@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 
 export type ColorRegex = {
     regex: string;
-    color: string;
+    color?: string;
     label?: string;
 };
 

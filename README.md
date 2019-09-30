@@ -18,6 +18,22 @@
 
 # What's new
 
+* [0.8.0]
+    - Introducing `AutoColoring` - You no longer need to provide a list of colors to map to, `ColorTabs` will generate consistent colors for your list of regular expressions. This configuration is enough:
+    ```json
+    {
+        "colorTabs.config": [
+            {
+                "regex": ".*/web/.*",
+            },
+            {
+                "regex": ".*/mobile/.*",
+            }
+        ]
+    }
+    ```
+
+
 * [0.6.0]
     - ColorTabs now changes the color of your status bar (set to `true` by default) - [PR #10](https://github.com/oreporan/color-tabs-vscode/pull/10).    
     set `colorTabs.statusBarBackground` to `true` in your workspace settings to get this new feature.

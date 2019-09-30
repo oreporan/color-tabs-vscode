@@ -2,7 +2,7 @@
     "name": "color-tabs-vscode-ext",
     "displayName": "ColorTabs",
     "description": "changes the active tab/status-bar/title-background color based on regex",
-    "version": "0.7.2",
+    "version": "0.8.0",
     "publisher": "orepor",
     "repository": {
         "url": "https://github.com/oreporan/color-tabs-vscode"
@@ -37,17 +37,13 @@
                     "type": "array",
                     "default": [
                         {
-                            "regex": ".*/web/.*",
-                            "color": "#c0d8e3",
-                            "label": "WEB"
+                            "regex": ".*/web/.*"
                         },
                         {
-                            "regex": ".*/mobile/.*",
-                            "color": "#e18a7a",
-                            "label": "MOBILE"
+                            "regex": ".*/mobile/.*"
                         }
                     ],
-                    "description": "list of mappings from path to color"
+                    "description": "list of regular expressions"
                 },
                 "colorTabs.tabBorder": {
                     "type": "boolean",
