@@ -37,17 +37,13 @@
                     "type": "array",
                     "default": [
                         {
-                            "regex": ".*/web/.*",
-                            "color": "#c0d8e3",
-                            "label": "WEB"
+                            "regex": ".*/web/.*"
                         },
                         {
-                            "regex": ".*/mobile/.*",
-                            "color": "#e18a7a",
-                            "label": "MOBILE"
+                            "regex": ".*/mobile/.*"
                         }
                     ],
-                    "description": "list of mappings from path to color"
+                    "description": "list of regular expressions"
                 },
                 "colorTabs.tabBorder": {
                     "type": "boolean",
