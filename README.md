@@ -4,19 +4,18 @@
 [![MarketplaceVersion](https://vsmarketplacebadge.apphb.com/version/orepor.color-tabs-vscode-ext.svg)](https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext#overview)
 [![MarkerplaceDownloads](https://vsmarketplacebadge.apphb.com/downloads/orepor.color-tabs-vscode-ext.svg)](https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext#overview)
 
-![Title background](./docs/color-tabs-4.4.gif)
+![Title background](./docs/coverGif.gif)
 
 <!-- TOC -->
 
 - [ColorTabs for vscode](#colortabs-for-vscode)
-- [What's new](#whats-new)
+    - [What's new](#whats-new)
     - [Extension Settings](#extension-settings)
-    - [Common Use Cases](#common-use-cases)
     - [Known Issues](#known-issues)
 
 <!-- /TOC -->
 
-# What's new
+## What's new
 
 * [0.8.0]
     - Introducing `AutoColoring` - You no longer need to provide a list of colors to map to, `ColorTabs` will generate consistent colors for your list of regular expressions. This configuration is enough:
@@ -77,52 +76,18 @@ A `workspace.settings` example :
 "colorTabs.config": [
         {
             "regex": ".*\/mobile\/.*",
-            "color": "#FF0000",
-            "label": "MOBILE",
+            "color": "#FF0000", // Optional - ColorTabs can choose a color for you
         },
         {
             "regex": ".*\/web\/.*",
-            "color": "#00FF00",
-            "label": "WEB",
+            "color": "#00FF00", // Optional - ColorTabs can choose a color for you
         },{
-            "regex": ".*\/docs\/.*",
-            "color": "#0000FF",
-            "label": "DOCS",
+            "regex": ".*\/desktop\/.*",
+            "color": "#0000FF", // Optional - ColorTabs can choose a color for you
         },
     ]
 "colorTabs.titleBackground": true    
 ```
-
-## Common Use Cases
-
-1. Working on a monorepo, this extension can help you quickly understand if the current file is where you want to be.
-
-For example your repo has both server and client, so this extension will color the client file tabs in one color, and the server file tabs in another.
-
-Another use case is for repos that have both reactJS and react-native files.
-Many times the files have the same names but are just in different directories like:
-
-`mobile/Component.tsx`     
-`web/Component.tsx`
-
-With this extension you can easily differntiate between the two.
-
-2. Accidentaly writing code in build/auto-generated files -     
-Sometimes you start writing in some file and realize its an auto-generated file that will get over-written. Frustrating right?
-Try this plugin with this regex:
-```json
-"colorTabs.config": [
-        {
-            "regex": ".*\/build\/.*",
-            "color": "#FF0000"
-        }
-    ]
-"colorTabs.titleBackground": true    
-```
-
-And `BOOM` - your build files are now in red. No more mistakes!
-
-
 
 ## Known Issues
 * This plugin writes to your vscode workspace `settings.json`, this means that it creates a git commit. To avoid pushing this change, you should have your `.vscode` directory in `.gitignore`. Currently writing to the `settings.json` is the only way to manipulate the colors in runtime.
