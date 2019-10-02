@@ -21,7 +21,17 @@
 This extension contributes the following settings:
 
 * `colorTabs.config`:  list of mappings from path to color         
-"default": [{"regex": ".*\/web\/.*"},{"regex": ".*\/mobile\/.*"}],
+"default": 
+```json
+    [
+        {
+            "regex": ".*\/web\/.*"
+        },
+        {
+            "regex": ".*\/mobile\/.*"
+        }
+    ]
+```
 
 * `colorTabs.statusBarBackground`:  Enable statusBar background coloring. default to `true`
 * `colorTabs.tabBorder`:  Enable tab border coloring. default to `true`
