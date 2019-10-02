@@ -9,11 +9,48 @@
 <!-- TOC -->
 
 - [ColorTabs for vscode](#colortabs-for-vscode)
-    - [What's new](#whats-new)
     - [Extension Settings](#extension-settings)
+    - [Advanced Settings](#advanced-settings)
+    - [What's new](#whats-new)
     - [Known Issues](#known-issues)
 
 <!-- /TOC -->
+
+## Extension Settings
+
+This extension contributes the following settings:
+
+* `colorTabs.config`:  list of mappings from path to color         
+"default": [{"regex": ".*\/web\/.*"},{"regex": ".*\/mobile\/.*"}],
+
+* `colorTabs.statusBarBackground`:  Enable statusBar background coloring. default to `true`
+* `colorTabs.tabBorder`:  Enable tab border coloring. default to `true`
+* `colorTabs.titleBackground`:  Enable title background coloring. default to `false`
+* `colorTabs.activityBarBackground`:  Enable activityBar background coloring. default to `false`
+* `colorTabs.titleLabel`:  Enable title label. default to `false`
+
+## Advanced Settings
+If you'd like to choose the colors yourself, and/or add a label (which is presented at the top window bar).    
+Note - you can mix the configuration, placing colors in some, and not in others.
+An **advanced** `workspace.settings` example : 
+
+```json
+"colorTabs.config": [
+        {
+            "regex": ".*\/mobile\/.*",
+            "color": "#FF0000",
+            "label": "MOBILE"
+        },
+        {
+            "regex": ".*\/web\/.*",
+            "color": "#00FF00",
+        },{
+            "regex": ".*\/desktop\/.*"
+        },
+    ]
+"colorTabs.titleBackground": true    
+```
+
 
 ## What's new
 
@@ -55,39 +92,6 @@
     Example:
     ![Title background](./docs/color-tabs-4.4.gif)
 
-
-## Extension Settings
-
-This extension contributes the following settings:
-
-* `colorTabs.config`:  list of mappings from path to color         
-"default": [{"regex": ".*\/web\/.*", "color": "#ff0000"},{"regex": ".*\/mobile\/.*", "color":  "#00ff00"}],
-
-* `colorTabs.statusBarBackground`:  Enable statusBar background coloring. default to `true`
-* `colorTabs.tabBorder`:  Enable tab border coloring. default to `true`
-* `colorTabs.titleBackground`:  Enable title background coloring. default to `false`
-* `colorTabs.activityBarBackground`:  Enable activityBar background coloring. default to `false`
-* `colorTabs.titleLabel`:  Enable title label. default to `false`
-
-
-A `workspace.settings` example : 
-
-```json
-"colorTabs.config": [
-        {
-            "regex": ".*\/mobile\/.*",
-            "color": "#FF0000", // Optional - ColorTabs can choose a color for you
-        },
-        {
-            "regex": ".*\/web\/.*",
-            "color": "#00FF00", // Optional - ColorTabs can choose a color for you
-        },{
-            "regex": ".*\/desktop\/.*",
-            "color": "#0000FF", // Optional - ColorTabs can choose a color for you
-        },
-    ]
-"colorTabs.titleBackground": true    
-```
 
 ## Known Issues
 * This plugin writes to your vscode workspace `settings.json`, this means that it creates a git commit. To avoid pushing this change, you should have your `.vscode` directory in `.gitignore`. Currently writing to the `settings.json` is the only way to manipulate the colors in runtime.
