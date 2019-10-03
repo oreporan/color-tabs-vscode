@@ -66,6 +66,11 @@ An **advanced** `workspace.settings` example :
 
 ## What's new
 
+* [0.9.0]
+    - Added `colorTabs.ignoreCase` configuration, defaults to `false` -  [PR #29](https://github.com/oreporan/color-tabs-vscode/pull/29)    
+     set `colorTabs.ignoreCase` to `true` in your workspace settings to get this new feature.
+
+     
 * [0.8.0]
     - Introducing `AutoColoring` - You no longer need to provide a list of colors to map to, `ColorTabs` will generate consistent colors for your list of regular expressions. This configuration is enough:
     ```json
