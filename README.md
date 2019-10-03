@@ -38,6 +38,7 @@ This extension contributes the following settings:
 * `colorTabs.titleBackground`:  Enable title background coloring. default to `false`
 * `colorTabs.activityBarBackground`:  Enable activityBar background coloring. default to `false`
 * `colorTabs.titleLabel`:  Enable title label. default to `false`
+* `colorTabs.ignoreCase`:  Ignore case while matching Regex. default to `false`
 
 ## Advanced Settings
 If you'd like to choose the colors yourself, and/or add a label (which is presented at the top window bar).    
@@ -59,6 +60,7 @@ An **advanced** `workspace.settings` example :
         },
     ]
 "colorTabs.titleBackground": true    
+"colorTabs.ignoreCase": true    
 ```
 
 
