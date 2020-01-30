@@ -66,6 +66,10 @@ An **advanced** `workspace.settings` example :
 
 ## What's new
 
+* [0.10.0]
+    - Stop writing an empty object to settings when colorTabs doesn't find any regex mapping - [PR #36](https://github.com/oreporan/color-tabs-vscode/pull/36)  
+
+
 * [0.9.0]
     - Added `colorTabs.ignoreCase` configuration, defaults to `false` -  [PR #29](https://github.com/oreporan/color-tabs-vscode/pull/29)    
      set `colorTabs.ignoreCase` to `true` in your workspace settings to get this new feature.
