@@ -1,7 +1,9 @@
 import * as vscode from 'vscode';
 import getSettings from './getSettings';
 
-type ColorCustomization = { [key: string]: string | undefined };
+type ColorCustomization = { [key: string]: string | undefined } | undefined;
+
+const COLOR_CUSTOMIZATIONS = 'colorCustomizations'
 
 const invertHex = (hex?: string) => {
     if (!hex) {
@@ -14,7 +16,7 @@ const invertHex = (hex?: string) => {
 export default async (color?: string) => {
     const colorInverted = invertHex(color);
     const settings = vscode.workspace.getConfiguration('workbench');
-    const currentColorCustomization: ColorCustomization = settings.get('colorCustomizations') || {};
+    const currentColorCustomization: ColorCustomization = settings.get(COLOR_CUSTOMIZATIONS) || {};
     const {
         tabBorder,
         titleBackground,
@@ -33,10 +35,9 @@ export default async (color?: string) => {
     const statusBarBackgroundColor = statusBarBackground ? color : undefined;
     const statusBarForegroundColor = statusBarBackground ? colorInverted : undefined;
 
-    let colorCustomization: ColorCustomization = {
+    const colorCustomization: ColorCustomization = {
         ...currentColorCustomization,
         'tab.activeBorder': tabBarBorderColor,
-        'tab.unfocusedActiveBorder': '#fff0', // Transparent
         'titleBar.activeBackground': titleBarBackgroundColor,
         'titleBar.activeForeground': titleBarForegroundColor,
         'activityBar.background': activityBarBackgroundColor,
@@ -45,5 +46,6 @@ export default async (color?: string) => {
         'statusBar.foreground': statusBarForegroundColor,
     };
 
-    settings.update('colorCustomizations', colorCustomization, vscode.ConfigurationTarget.Workspace);
+    const hasItems = Object.keys(colorCustomization).filter(x => !!colorCustomization[x]).length
+    settings.update(COLOR_CUSTOMIZATIONS, hasItems ? colorCustomization : undefined, vscode.ConfigurationTarget.Workspace);
 }
