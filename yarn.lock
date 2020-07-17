@@ -494,8 +494,8 @@ linkify-it@^2.0.0:
     uc.micro "^1.0.1"
 
 lodash@^4.15.0, lodash@^4.17.10:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
 
 markdown-it@^8.3.1:
   version "8.4.2"
