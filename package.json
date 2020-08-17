@@ -2,7 +2,7 @@
   "name": "color-tabs-vscode-ext",
   "displayName": "ColorTabs",
   "description": "changes the active tab/status-bar/title-background color based on regex",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "publisher": "orepor",
   "repository": {
     "url": "https://github.com/oreporan/color-tabs-vscode"
@@ -33,6 +33,13 @@
       {
         "command": "colorTabs.addFile",
         "title": "ColorTabs: Add file to configuration"
+      },{
+        "command": "colorTabs.removeFile",
+        "title": "ColorTabs: Remove file from configuration"
+      },
+      {
+        "command": "colorTabs.clearConfig",
+        "title": "ColorTabs: Clear all regex configuration settings"
       }
     ],
     "configuration": {
