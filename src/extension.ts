@@ -3,6 +3,7 @@ import * as vscode from 'vscode';
 import getMapping from './getMapping';
 import changeColors from './changeColors';
 import changeLabel from './changeLabel';
+import addFileCommand from './commands/addFile';
 
 export function activate(context: vscode.ExtensionContext) {
     
@@ -22,6 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
     })
+    context.subscriptions.push(vscode.commands.registerCommand('colorTabs.addFile', addFileCommand));
     context.subscriptions.push(disposable);
 }
 
