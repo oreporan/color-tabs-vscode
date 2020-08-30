@@ -18,6 +18,8 @@ const addFile = async () => {
     prompt: "Edit the folder regex",
   });
 
+  if (!value) return;
+
   settings.update(
     "config",
     [...currentConfig, { regex: value }],
