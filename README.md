@@ -66,6 +66,10 @@ An **advanced** `workspace.settings` example :
 
 ## What's new
 
+* [0.12.0]
+    - Ability to add/remove/clear the current file directly from the menu palette - [PR #36](https://github.com/oreporan/color-tabs-vscode/pull/46)  
+    ![Title label](./docs/contextMenu.png)
+
 * [0.10.0]
     - Stop writing an empty object to settings when colorTabs doesn't find any regex mapping - [PR #36](https://github.com/oreporan/color-tabs-vscode/pull/36)  
 
