@@ -3,8 +3,8 @@ import * as vscode from 'vscode';
 import getMapping from './getMapping';
 import changeColors from './changeColors';
 import changeLabel from './changeLabel';
-import addFileCommand from './commands/addFile';
-import removeFileCommand from './commands/removeFile';
+import addFolderCommand from './commands/addFolder';
+import removeFolderCommand from './commands/removeFolder';
 
 export function activate(context: vscode.ExtensionContext) {
     
@@ -29,8 +29,8 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 const registerCommands = (context: vscode.ExtensionContext) => {
-    context.subscriptions.push(vscode.commands.registerCommand('colorTabs.addFile', addFileCommand));
-    context.subscriptions.push(vscode.commands.registerCommand('colorTabs.removeFile', removeFileCommand));
+    context.subscriptions.push(vscode.commands.registerCommand('colorTabs.addFolder', addFolderCommand));
+    context.subscriptions.push(vscode.commands.registerCommand('colorTabs.removeFolder', removeFolderCommand));
 }
 
 // this method is called when your extension is deactivated

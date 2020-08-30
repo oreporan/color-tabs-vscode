@@ -31,10 +31,10 @@
   "contributes": {
     "commands": [
       {
-        "command": "colorTabs.addFile",
+        "command": "colorTabs.addFolder",
         "title": "ColorTabs: Add folder to configuration"
       },{
-        "command": "colorTabs.removeFile",
+        "command": "colorTabs.removeFolder",
         "title": "ColorTabs: Remove regex from configuration"
       }
     ],
