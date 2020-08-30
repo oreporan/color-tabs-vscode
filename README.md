@@ -6,15 +6,22 @@
 
 ![Title background](./docs/coverGif.gif)
 
+
 <!-- TOC -->
 
 - [ColorTabs for vscode](#colortabs-for-vscode)
+    - [Quick Usage](#quick-usage)
     - [Extension Settings](#extension-settings)
     - [Advanced Settings](#advanced-settings)
     - [What's new](#whats-new)
     - [Known Issues](#known-issues)
 
 <!-- /TOC -->
+
+## Quick Usage
+In the menu choose the folders you want to add/remove
+
+![Title label](./docs/contextMenu.png)
 
 ## Extension Settings
 
