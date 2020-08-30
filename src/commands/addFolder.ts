@@ -22,7 +22,7 @@ const addFile = async () => {
 
   settings.update(
     "config",
-    [...currentConfig, { regex: value }],
+    [{ regex: value }, ...currentConfig],
     vscode.ConfigurationTarget.Workspace
   );
 };
