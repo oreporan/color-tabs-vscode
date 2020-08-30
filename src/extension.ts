@@ -5,7 +5,6 @@ import changeColors from './changeColors';
 import changeLabel from './changeLabel';
 import addFileCommand from './commands/addFile';
 import removeFileCommand from './commands/removeFile';
-import clearConfigCommand from './commands/clearConfig';
 
 export function activate(context: vscode.ExtensionContext) {
     
@@ -32,7 +31,6 @@ export function activate(context: vscode.ExtensionContext) {
 const registerCommands = (context: vscode.ExtensionContext) => {
     context.subscriptions.push(vscode.commands.registerCommand('colorTabs.addFile', addFileCommand));
     context.subscriptions.push(vscode.commands.registerCommand('colorTabs.removeFile', removeFileCommand));
-    context.subscriptions.push(vscode.commands.registerCommand('colorTabs.clearConfig', clearConfigCommand));
 }
 
 // this method is called when your extension is deactivated

@@ -36,10 +36,6 @@
       },{
         "command": "colorTabs.removeFile",
         "title": "ColorTabs: Remove regex from configuration"
-      },
-      {
-        "command": "colorTabs.clearConfig",
-        "title": "ColorTabs: Clear all regex configuration settings"
       }
     ],
     "configuration": {
