@@ -35,7 +35,7 @@
         "title": "ColorTabs: Add folder to configuration"
       },{
         "command": "colorTabs.removeFile",
-        "title": "ColorTabs: Remove file from configuration"
+        "title": "ColorTabs: Remove regex from configuration"
       },
       {
         "command": "colorTabs.clearConfig",
