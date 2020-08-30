@@ -32,7 +32,7 @@
     "commands": [
       {
         "command": "colorTabs.addFile",
-        "title": "ColorTabs: Add file to configuration"
+        "title": "ColorTabs: Add folder to configuration"
       },{
         "command": "colorTabs.removeFile",
         "title": "ColorTabs: Remove file from configuration"
