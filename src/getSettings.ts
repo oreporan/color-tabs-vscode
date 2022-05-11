@@ -9,6 +9,7 @@ export type ColorRegex = {
 type AllSettings = {
     config?: ColorRegex[];
     tabBorder?: boolean;
+    tabBackground?: boolean;
     ignoreCase?: boolean;
     titleBackground?: boolean;
     activityBarBackground?: boolean;
