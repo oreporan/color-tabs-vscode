@@ -20,6 +20,7 @@ export default async (color?: string) => {
     settings.get(COLOR_CUSTOMIZATIONS) || {};
   const {
     tabBorder,
+    tabBackground,
     titleBackground,
     activityBarBackground,
     statusBarBackground,
@@ -36,6 +37,7 @@ export default async (color?: string) => {
   const colorCustomization: ColorCustomization = {
     ...currentColorCustomization,
     ...(tabBorder ? { "tab.activeBorder": tabBarBorderColor } : {}),
+    ...(tabBackground ? { "tab.activeBackground": tabBarBorderColor } : {}),
     ...(titleBackground
       ? { "titleBar.activeBackground": titleBarBackgroundColor }
       : {}),

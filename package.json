@@ -64,6 +64,11 @@
           "default": true,
           "description": "color tab border if regex match found"
         },
+        "colorTabs.tabBackground": {
+          "type": "boolean",
+          "default": false,
+          "description": "color tab background if regex match found"
+        },
         "colorTabs.titleBackground": {
           "type": "boolean",
           "default": false,
