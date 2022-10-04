@@ -60,7 +60,7 @@
           "default": false,
           "description": "Ignores case on Regex matches"
         },
-        "colorTabs.listFileOutline": {
+        "colorTabs.listFileBorder": {
           "type": "boolean",
           "default": false,
           "description": "color the selected file border color in the explorer"

@@ -24,7 +24,7 @@ export default async (color?: string) => {
     titleBackground,
     activityBarBackground,
     statusBarBackground,
-    listFileOutline,
+    listFileBorder,
   } = getSettings();
 
   const tabBarBorderColor = color;
@@ -46,7 +46,7 @@ export default async (color?: string) => {
           "titleBar.activeForeground": titleBarForegroundColor,
         }
       : {}),
-    ...(listFileOutline
+    ...(listFileBorder
       ? {
           "list.focusOutline": listFileTextColor,
           "list.inactiveFocusOutline": listFileTextColor,
