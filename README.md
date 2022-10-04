@@ -10,18 +10,12 @@
 <!-- TOC -->
 
 - [ColorTabs for vscode](#colortabs-for-vscode)
-    - [Quick Usage](#quick-usage)
     - [Extension Settings](#extension-settings)
     - [Advanced Settings](#advanced-settings)
     - [What's new](#whats-new)
     - [Known Issues](#known-issues)
 
 <!-- /TOC -->
-
-## Quick Usage
-In the menu choose the folders you want to add/remove
-
-![Title label](./docs/contextMenu.png)
 
 ## Extension Settings
 
@@ -46,6 +40,7 @@ This extension contributes the following settings:
 * `colorTabs.activityBarBackground`:  Enable activityBar background coloring. default to `false`
 * `colorTabs.titleLabel`:  Enable title label. default to `false`
 * `colorTabs.ignoreCase`:  Ignore case while matching Regex. default to `false`
+* `colorTabs.listFileBorder`:  Colors the border of the selected file in the file explorer. default to `false`
 
 ## Advanced Settings
 If you'd like to choose the colors yourself, and/or add a label (which is presented at the top window bar).    
@@ -72,6 +67,10 @@ An **advanced** `workspace.settings` example :
 
 
 ## What's new
+
+* [0.13.0]
+    - Ability to color the file border in the file explorer (incase you don't like working with tabs) - [PR #69](https://github.com/oreporan/color-tabs-vscode/pull/69)  
+    ![Title label](./docs/1_13_0.png)
 
 * [0.12.0]
     - Ability to add/remove/clear the current file directly from the menu palette - [PR #36](https://github.com/oreporan/color-tabs-vscode/pull/46)  

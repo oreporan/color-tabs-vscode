@@ -26,8 +26,8 @@ export default async (label?: string) => {
     const currentTitleSetting = settings.get<string>('title') || '';
     if (label) {
         const newTitle = addOrReplaceLabel(label, currentTitleSetting);
-        settings.update('title', newTitle, vscode.ConfigurationTarget.Workspace);
+        return settings.update('title', newTitle, vscode.ConfigurationTarget.Workspace);
     } else {
-        settings.update('title', undefined, vscode.ConfigurationTarget.Workspace);
+        return settings.update('title', undefined, vscode.ConfigurationTarget.Workspace);
     }
 }
