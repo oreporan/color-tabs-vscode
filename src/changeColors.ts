@@ -24,12 +24,14 @@ export default async (color?: string) => {
     titleBackground,
     activityBarBackground,
     statusBarBackground,
+    listFileOutline,
   } = getSettings();
 
   const tabBarBorderColor = color;
   const titleBarBackgroundColor = color;
   const titleBarForegroundColor = colorInverted;
   const activityBarBackgroundColor = color;
+  const listFileTextColor = color;
   const activityBarForegroundColor = colorInverted;
   const statusBarBackgroundColor = color;
   const statusBarForegroundColor = colorInverted;
@@ -39,29 +41,36 @@ export default async (color?: string) => {
     ...(tabBorder ? { "tab.activeBorder": tabBarBorderColor } : {}),
     ...(tabBackground ? { "tab.activeBackground": tabBarBorderColor } : {}),
     ...(titleBackground
-      ? { "titleBar.activeBackground": titleBarBackgroundColor }
+      ? {
+          "titleBar.activeBackground": titleBarBackgroundColor,
+          "titleBar.activeForeground": titleBarForegroundColor,
+        }
       : {}),
-    ...(titleBackground
-      ? { "titleBar.activeForeground": titleBarForegroundColor }
+    ...(listFileOutline
+      ? {
+          "list.focusOutline": listFileTextColor,
+          "list.inactiveFocusOutline": listFileTextColor,
+        }
       : {}),
     ...(activityBarBackground
-      ? { "activityBar.background": activityBarBackgroundColor }
+      ? {
+          "activityBar.background": activityBarBackgroundColor,
+          "activityBar.foreground": activityBarForegroundColor,
+        }
       : {}),
-    ...(activityBarBackground
-      ? { "activityBar.foreground": activityBarForegroundColor }
-      : {}),
+
     ...(statusBarBackground
-      ? { "statusBar.background": statusBarBackgroundColor }
-      : {}),
-    ...(statusBarBackground
-      ? { "statusBar.foreground": statusBarForegroundColor }
+      ? {
+          "statusBar.background": statusBarBackgroundColor,
+          "statusBar.foreground": statusBarForegroundColor,
+        }
       : {}),
   };
 
   const hasItems = Object.keys(colorCustomization).filter(
     (x) => !!colorCustomization[x]
   ).length;
-  settings.update(
+  return settings.update(
     COLOR_CUSTOMIZATIONS,
     hasItems ? colorCustomization : undefined,
     vscode.ConfigurationTarget.Workspace

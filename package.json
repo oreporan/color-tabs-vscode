@@ -2,13 +2,13 @@
   "name": "color-tabs-vscode-ext",
   "displayName": "ColorTabs",
   "description": "changes the active tab/status-bar/title-background color based on regex",
-  "version": "0.12.1",
+  "version": "0.13.0",
   "publisher": "orepor",
   "repository": {
     "url": "https://github.com/oreporan/color-tabs-vscode"
   },
   "engines": {
-    "vscode": "1.30.0"
+    "vscode": "1.71.2"
   },
   "categories": [
     "Other",
@@ -33,7 +33,8 @@
       {
         "command": "colorTabs.addFolder",
         "title": "ColorTabs: Add folder to configuration"
-      },{
+      },
+      {
         "command": "colorTabs.removeFolder",
         "title": "ColorTabs: Remove regex from configuration"
       }
@@ -59,6 +60,11 @@
           "default": false,
           "description": "Ignores case on Regex matches"
         },
+        "colorTabs.listFileOutline": {
+          "type": "boolean",
+          "default": false,
+          "description": "color the selected file border color in the explorer"
+        },
         "colorTabs.tabBorder": {
           "type": "boolean",
           "default": true,
@@ -70,7 +76,7 @@
           "description": "color tab background if regex match found"
         },
         "colorTabs.titleBackground": {
-          "type": "boolean",
+          "type": "boolean", 
           "default": false,
           "description": "color title bar background if regex match found"
         },
@@ -103,9 +109,10 @@
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/node": "^7.0.43",
+    "@types/vscode": "^1.71.0",
     "tslint": "^5.8.0",
-    "typescript": "^3.3",
-    "vsce": "^1.54.0",
-    "vscode": "1.1.37"
+    "typescript": "4.4.3",
+    "vsce": "^1.71",
+    "vscode": "^1.1.37"
   }
 }
