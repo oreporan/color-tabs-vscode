@@ -73,6 +73,12 @@ An **advanced** `workspace.settings` example :
 
 ## What's new
 
+
+* [0.13.0]
+    - Added `colorTabs.tabBackground` configuration, defaults to `false` -  [PR #61](https://github.com/oreporan/color-tabs-vscode/pull/61)    
+     set `colorTabs.tabBackground` to `true` in your workspace settings to get this new feature.
+
+
 * [0.12.0]
     - Ability to add/remove/clear the current file directly from the menu palette - [PR #36](https://github.com/oreporan/color-tabs-vscode/pull/46)  
     ![Title label](./docs/contextMenu.png)
