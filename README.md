@@ -1,9 +1,6 @@
 ![Logo](./docs/ColorTabs.png)
 # ColorTabs for vscode
 
-[![MarketplaceVersion](https://vsmarketplacebadge.apphb.com/version/orepor.color-tabs-vscode-ext.svg)](https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext#overview)
-[![MarkerplaceDownloads](https://vsmarketplacebadge.apphb.com/downloads/orepor.color-tabs-vscode-ext.svg)](https://marketplace.visualstudio.com/items?itemName=orepor.color-tabs-vscode-ext#overview)
-
 ![Title background](./docs/coverGif.gif)
 
 
@@ -14,7 +11,7 @@
     - [Extension Settings](#extension-settings)
     - [Advanced Settings](#advanced-settings)
     - [What's new](#whats-new)
-    - [Known Issues](#known-issues)
+    - [Notes and known issues](#notes-and-known-issues)
 
 <!-- /TOC -->
 
@@ -131,5 +128,6 @@ An **advanced** `workspace.settings` example :
     ![Title background](./docs/color-tabs-4.4.gif)
 
 
-## Known Issues
+## Notes and known issues
 * This plugin writes to your vscode workspace `settings.json`, this means that it creates a git commit. To avoid pushing this change, you should have your `.vscode` directory in `.gitignore`. Currently writing to the `settings.json` is the only way to manipulate the colors in runtime.
+* The regular expression is matched against the relative path of the file (to the workspace), not just the file name.

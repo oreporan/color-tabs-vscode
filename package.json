@@ -46,10 +46,10 @@
           "type": "array",
           "default": [
             {
-              "regex": ".*/web/.*"
+              "regex": ".*\/web\/.*"
             },
             {
-              "regex": ".*/mobile/.*"
+              "regex": ".*\/mobile\/.*"
             }
           ],
           "description": "list of regular expressions"
