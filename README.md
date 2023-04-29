@@ -43,6 +43,7 @@ This extension contributes the following settings:
 * `colorTabs.activityBarBackground`:  Enable activityBar background coloring. default to `false`
 * `colorTabs.titleLabel`:  Enable title label. default to `false`
 * `colorTabs.ignoreCase`:  Ignore case while matching Regex. default to `false`
+* `colorTabs.tabBackground`:  Enable tab background coloring. default to `false`
 
 ## Advanced Settings
 If you'd like to choose the colors yourself, and/or add a label (which is presented at the top window bar).    
