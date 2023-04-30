@@ -4,9 +4,11 @@
         "target": "es6",
         "outDir": "out",
         "lib": [
-            "es6"
-        ],
-        "sourceMap": true,
+            "es6",
+            "dom"
+          ],
+        "skipLibCheck": true,
+        "sourceMap": false,
         "rootDir": "src",
         /* Strict Type-Checking Option */
         "strict": true,   /* enable all strict type-checking options */

@@ -2,13 +2,13 @@
   "name": "color-tabs-vscode-ext",
   "displayName": "ColorTabs",
   "description": "changes the active tab/status-bar/title-background color based on regex",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "publisher": "orepor",
   "repository": {
     "url": "https://github.com/oreporan/color-tabs-vscode"
   },
   "engines": {
-    "vscode": "1.30.0"
+    "vscode": "1.73.0"
   },
   "categories": [
     "Other",
@@ -33,7 +33,8 @@
       {
         "command": "colorTabs.addFolder",
         "title": "ColorTabs: Add folder to configuration"
-      },{
+      },
+      {
         "command": "colorTabs.removeFolder",
         "title": "ColorTabs: Remove regex from configuration"
       }
@@ -96,16 +97,15 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "package": "rm -f color-tabs-vscode-ext-* && vsce package",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/node": "^7.0.43",
+    "@types/vscode": "^1.77.0",
     "tslint": "^5.8.0",
-    "typescript": "^3.3",
+    "typescript": "4.9.5",
     "vsce": "^1.54.0",
-    "vscode": "1.1.37"
+    "vscode-test": "^1.6.1"
   }
 }
